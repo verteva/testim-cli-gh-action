@@ -1,0 +1,21 @@
+# action.yml
+name: 'Testim CLI'
+description: 'Run tests on Testim.io'
+inputs:
+  token:  # id of input
+    description: 'Testim auth token'
+    required: true
+  project:
+    description: 'Project ID'
+    required: true
+  grid:
+    description: 'Grid to run the tests on'
+    required: true
+    default: "Testim-Grid"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.project }}
+    - ${{ inputs.grid }}
