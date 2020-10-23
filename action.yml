@@ -12,6 +12,9 @@ inputs:
     description: 'Grid to run the tests on'
     required: true
     default: "Testim-Grid"
+  suite:
+    description: 'The test suite to run'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -19,3 +22,4 @@ runs:
     - ${{ inputs.token }}
     - ${{ inputs.project }}
     - ${{ inputs.grid }}
+    - ${{ inputs.suite }}
