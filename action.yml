@@ -15,6 +15,21 @@ inputs:
   suite:
     description: 'The test suite to run'
     required: true
+  test-config:
+    description: 'The test configuration'
+    required: false
+    default: MacOS-Chrome
+  retries:
+    description: 'The number of retries'
+    required: false
+    default: '1'
+  base-url:
+    description: 'The base url to test at'
+    required: false
+    default: https://staging-apply.verteva.com.au
+  
+  
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -23,3 +38,6 @@ runs:
     - ${{ inputs.project }}
     - ${{ inputs.grid }}
     - ${{ inputs.suite }}
+    - ${{ inputs.test-config }}
+    - ${{ inputs.retires }}
+    - ${{ inputs.base-url }}
