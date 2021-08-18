@@ -39,5 +39,5 @@ runs:
     - ${{ inputs.grid }}
     - ${{ inputs.suite }}
     - ${{ inputs.test-config }}
-    - ${{ inputs.retires }}
+    - ${{ inputs.retries }}
     - ${{ inputs.base-url }}
