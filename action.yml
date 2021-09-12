@@ -27,6 +27,11 @@ inputs:
     description: 'The base url to test at'
     required: false
     default: https://staging-apply.verteva.com.au
+  parallel:
+    description: 'Number of parallel runs'
+    required: false
+    default: 4
+  
   
   
 
@@ -41,3 +46,4 @@ runs:
     - ${{ inputs.test-config }}
     - ${{ inputs.retries }}
     - ${{ inputs.base-url }}
+    - ${{ inputs.parallel }}
